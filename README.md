@@ -1,10 +1,16 @@
+
+
+Config version control:
+
 https://www.atlassian.com/git/tutorials/dotfiles
+
+Set timezone:
 
 ```
 sudo setup-timezone Asia/Kuala_Lumpur
 ```
 
-as root:
+Set hostname (as root):
 ```
 echo "shortname" > /etc/hostname
 
@@ -12,8 +18,9 @@ hostname -F /etc/hostname
 ```
 
 
-flatpak:
+Fix flatpak:
 ```
+sudo apk add flatpak
 cd /var/lib/flatpak/repo/
 mkdir refs
 sudo mkdir refs
