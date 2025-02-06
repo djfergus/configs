@@ -32,6 +32,7 @@ sudo mkdir heads
 Bitwarden:
 ```
 sudo apk add rbw
+rbw config set email 
 rbw register
 rbw get api.github.com|wl-copy
 ```
