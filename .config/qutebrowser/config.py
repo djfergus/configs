@@ -96,7 +96,7 @@ config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}) AppleWebKit/{w
 # between 5.12 and 5.14 (inclusive), changing the value exposed to
 # JavaScript requires a restart.
 # Type: FormatString
-config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:131.0) Gecko/20100101 Firefox/131.0', 'https://accounts.google.com/*')
+config.set('content.headers.user_agent', 'Mozilla/5.0 ({os_info}; rv:133.0) Gecko/20100101 Firefox/133.0', 'https://accounts.google.com/*')
 
 # Which method of blocking ads should be used.  Support for Adblock Plus
 # (ABP) syntax blocklists using Brave's Rust library requires the
@@ -139,9 +139,17 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 # Type: Bool
 config.set('content.local_content_can_access_remote_urls', True, 'file:///home/df/.local/share/qutebrowser/userscripts/*')
 
+# Allow locally loaded documents to access remote URLs.
+# Type: Bool
+config.set('content.local_content_can_access_remote_urls', True, 'file:///home/user/.local/share/qutebrowser/userscripts/*')
+
 # Allow locally loaded documents to access other local URLs.
 # Type: Bool
 config.set('content.local_content_can_access_file_urls', False, 'file:///home/df/.local/share/qutebrowser/userscripts/*')
+
+# Allow locally loaded documents to access other local URLs.
+# Type: Bool
+config.set('content.local_content_can_access_file_urls', False, 'file:///home/user/.local/share/qutebrowser/userscripts/*')
 
 # Allow websites to show notifications.
 # Type: BoolAsk
@@ -210,10 +218,8 @@ c.fonts.default_size = '12pt'
 
 # Bindings for normal mode
 config.bind(';p', 'hint preview')
-#config.bind('<Space><Ctrl+m>', 'spawn mpv --force-window=immediate {url}')
+config.bind('<Ctrl+l>', 'spawn --userscript get_rbw_pass.sh')
 config.bind('M', "hint --rapid links spawn umpv --force-window=immediate  --ytdl-format='bestvideo[height<=?1080][vcodec!=?vp9]+bestaudio/best' {hint-url}")
-#config.bind('<Space>m', 'spawn umpv --force-window=immediate {url}')
-#config.bind('M', 'spawn mpv --force-window=immediate --ytdl-format="bestvideo[height<=?1080][vcodec!=?vp9]+bestaudio/best" {url}')
 config.bind('d', "''")
 config.bind('j', 'scroll-px 0 100')
 config.bind('k', 'scroll-px 0 -100')
