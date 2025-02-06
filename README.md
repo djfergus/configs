@@ -28,3 +28,11 @@ cd refs/
 sudo mkdir remotes
 sudo mkdir heads
 ```
+
+Bitwarden:
+```
+sudo apk add rbw
+rbw register
+rbw get api.github.com|wl-copy
+```
+
