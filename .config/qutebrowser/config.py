@@ -169,7 +169,7 @@ c.completion.height = '20%'
 #   - always: Whenever a completion is available.
 #   - auto: Whenever a completion is requested.
 #   - never: Never.
-c.completion.show = 'always'
+c.completion.show = 'auto'
 
 # Delay (in milliseconds) before updating completions after typing a
 # character.
