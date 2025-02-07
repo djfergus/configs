@@ -137,19 +137,19 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 
 # Allow locally loaded documents to access remote URLs.
 # Type: Bool
-config.set('content.local_content_can_access_remote_urls', True, 'file:///home/df/.local/share/qutebrowser/userscripts/*')
+config.set('content.local_content_can_access_remote_urls', True, 'file:///home/user/.local/share/qutebrowser/userscripts/*')
 
 # Allow locally loaded documents to access remote URLs.
 # Type: Bool
-config.set('content.local_content_can_access_remote_urls', True, 'file:///home/user/.local/share/qutebrowser/userscripts/*')
-
-# Allow locally loaded documents to access other local URLs.
-# Type: Bool
-config.set('content.local_content_can_access_file_urls', False, 'file:///home/df/.local/share/qutebrowser/userscripts/*')
+config.set('content.local_content_can_access_remote_urls', True, 'file:///home/df/.local/share/qutebrowser/userscripts/*')
 
 # Allow locally loaded documents to access other local URLs.
 # Type: Bool
 config.set('content.local_content_can_access_file_urls', False, 'file:///home/user/.local/share/qutebrowser/userscripts/*')
+
+# Allow locally loaded documents to access other local URLs.
+# Type: Bool
+config.set('content.local_content_can_access_file_urls', False, 'file:///home/df/.local/share/qutebrowser/userscripts/*')
 
 # Allow websites to show notifications.
 # Type: BoolAsk
@@ -197,7 +197,7 @@ c.url.start_pages = 'https://h.qwilio.com'
 
 # Default zoom level.
 # Type: Perc
-c.zoom.default = '150%'
+c.zoom.default = '100'
 
 # Render all web contents using a dark theme. On QtWebEngine < 6.7, this
 # setting requires a restart and does not support URL patterns, only the
@@ -209,12 +209,18 @@ c.zoom.default = '150%'
 # Type: Bool
 c.colors.webpage.darkmode.enabled = True
 
+# Default font families to use. Whenever "default_family" is used in a
+# font setting, it's replaced with the fonts listed here. If set to an
+# empty value, a system-specific monospace default is used.
+# Type: List of Font, or Font
+c.fonts.default_family = 'Terminus'
+
 # Default font size to use. Whenever "default_size" is used in a font
 # setting, it's replaced with the size listed here. Valid values are
 # either a float value with a "pt" suffix, or an integer value with a
 # "px" suffix.
 # Type: String
-c.fonts.default_size = '12pt'
+c.fonts.default_size = '8pt'
 
 # Bindings for normal mode
 config.bind(';p', 'hint preview')
