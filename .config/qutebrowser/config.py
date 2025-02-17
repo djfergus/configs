@@ -219,7 +219,7 @@ c.fonts.default_size = '12pt'
 # Bindings for normal mode
 config.bind(';p', 'hint preview')
 config.bind('<Ctrl+l>', 'spawn --userscript get_rbw_pass.sh')
-config.bind('M', "hint --rapid links spawn umpv --force-window=immediate  --ytdl-format='bestvideo[height<=?1080][vcodec!=?vp9]+bestaudio/best' {hint-url}")
+config.bind('M', "hint links spawn mpv --force-window=immediate  --ytdl-format='bestvideo[height<=?1080][vcodec!=?vp9]+bestaudio/best' {hint-url}")
 config.bind('d', "''")
 config.bind('j', 'scroll-px 0 100')
 config.bind('k', 'scroll-px 0 -100')
